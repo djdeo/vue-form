@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>vue-radio-click</title>
+	<link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+    <div id="option">
+    	<h2>Select one product to buy</h2>
+        <form>
+           
+            <label> 
+                <input type="radio" value="10" v-model="picked"> 
+                {{editions[0].text}}
+            </label>
+            <br>           
+            <label> 
+                <input type="radio" value="20" v-model="picked"> 
+                {{editions[1].text}}
+            </label>
+            <br>           
+            <label> 
+                <input type="radio" value="50" v-model="picked"> 
+                {{editions[2].text}}
+            </label>
+            <br>
+            
+        </form>
+        
+        <p>price: ${{ picked }}</p>
+        <div v-if="picked == 10">
+            <a href="link-1.html">Buy now 10</a>
+        </div>
+        <div v-else-if="picked == 20">
+            <a href="link-2.html">Buy now 20</a>
+        </div>
+        <div v-else>
+            <a href="link-3.html">Buy now 50</a>
+        </div>
+    </div>
+    <script src="price.js"></script>
+</body>
+
+
+</html>
