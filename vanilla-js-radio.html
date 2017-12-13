@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="style.css">
+<body>
+
+<p>
+  <b>Choose one edition to buy</b>
+</p>
+
+<form>
+  <label><input type="radio" name="edition" value="Home Edition $10" onclick="getText()" id="defaultOpen">Home Edition  <br></label>
+  <label><input type="radio" name="edition" value="Pro Edition $20" onclick="getText()">Pro  Edition <br></label>
+</form>
+
+<p><i id="picked"></i></p>
+
+<p>
+  <a id="buyNow" href="#">Buy Now</a>(Dynamic link)
+</p>
+
+
+
+<script>
+function getText() {
+    var edition = document.forms[0];
+    var picked = document.getElementById('picked');
+    var buyNow = document.getElementById('buyNow');
+    var txt = "";
+    links = ['link1.html','link2.html'];
+    for (var i = 0; i < edition.length; i++) {
+        if (edition[i].checked) {
+            txt += edition[i].value;
+            picked.innerHTML = "Picked: " + txt;
+            buyNow.href = links[i];
+        }
+    }
+}
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
