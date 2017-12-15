@@ -22,15 +22,15 @@
 
 <script>
 function getText() {
-    var edition = document.forms[0];
-    var picked = document.getElementById('picked');
-    var buyNow = document.getElementById('buyNow');
-    var txt = "";
-    links = ['link1.html','link2.html'];
-    for (var i = 0; i < edition.length; i++) {
+    let edition = document.forms[0];
+    let picked = document.getElementById('picked');
+    let buyNow = document.getElementById('buyNow');
+    let txt = "";
+    const links = ['link1.html','link2.html'];
+    for (let i = 0; i < edition.length; i++) {
         if (edition[i].checked) {
             txt += edition[i].value;
-            picked.innerHTML = "Picked: " + txt;
+            picked.innerHTML = `Picked: ${txt}`;
             buyNow.href = links[i];
         }
     }
