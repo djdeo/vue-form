@@ -23,10 +23,10 @@
 <script>
 function getText() {
     let edition = document.forms[0];
-    let picked = document.getElementById('picked');
-    let buyNow = document.getElementById('buyNow');
+    const picked = document.getElementById('picked'),
+          buyNow = document.getElementById('buyNow'),
+          links = ['link1.html','link2.html'];
     let txt = "";
-    const links = ['link1.html','link2.html'];
     for (let i = 0; i < edition.length; i++) {
         if (edition[i].checked) {
             txt += edition[i].value;
