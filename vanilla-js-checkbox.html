@@ -6,15 +6,15 @@
     <title>Default Checked Value</title>
     <link rel="stylesheet" href="style.css">
     <style>
-      input[type=checkbox]{
+    input[type=checkbox] {
         height: 24px;
         width: 24px;
         position: relative;
-      }
+    }
 
-      * {
+    * {
         font-size: 24px;
-      }
+    }
     </style>
 </head>
 
@@ -26,19 +26,18 @@
     </p>
     <p id="price"></p>
     <form>
-        
-        <label><input type="checkbox" name="upgrade" value="20" id="check" onclick="toggleCheck()">
-          Please deliver me the CD copy
+        <label>
+            <input type="checkbox" name="upgrade" value="20" id="check" onclick="toggleCheck()"> Please deliver me the CD copy
         </label>
         <hr>
     </form>
     <a id="buyNow" href="#">Buy Now</a> (dynamic link)
     <script>
-    var price = document.getElementById('price');
-    var check = document.forms[0];
-    var buyNow = document.getElementById('buyNow');
-    priceList = [10, 20];
-    link = ['link1.html', 'link2.html'];
+    const price = document.getElementById('price'),
+          check = document.forms[0],
+          buyNow = document.getElementById('buyNow'),
+          priceList = [10, 20],
+          link = ['link1.html', 'link2.html'];
 
     function toggleCheck() {
         if (check[0].checked) {
